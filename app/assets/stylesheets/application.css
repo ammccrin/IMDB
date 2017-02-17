@@ -27,3 +27,9 @@ header form {
   color: white;
   padding: 15px;
 }
+
+.movie {
+	width: 300px;
+	margin: auto;
+	margin-bottom: 50px;
+}

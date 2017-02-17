@@ -7,7 +7,6 @@ class Page extends React.Component {
     this.addMovie = this.addMovie.bind(this)
   }
 
-// debugger
   addMovie(movie){
       this.setState({movies: movie})
     }
@@ -17,10 +16,14 @@ class Page extends React.Component {
     return(
       <div className='center'>
         <Header addMovie={this.addMovie}/>
-        <h1>Here are your results</h1>
-        <Movie movies={this.state.movies} />
-      </div>
 
+        {
+          this.state.movies.map(function(movie, i ) {
+            return <Movies movie={movie} key={i} />
+          })
+        }
+
+      </div>
     )
   }
 
