@@ -8,11 +8,14 @@ class Header extends React.Component {
     e.preventDefault()
     let name = this.refs.content.value
     $.ajax({
-      url: "http://www.omdbapi.com/?s={name}"
+      url: "http://www.omdbapi.com/?s=" + name
+
     }).done(response => {
       this.props.addMovie(response.Search)
+      debugger
     })
   }
+
 
   render() {
     return(

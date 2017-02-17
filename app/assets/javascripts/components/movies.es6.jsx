@@ -1,14 +1,20 @@
 class Movies extends React.Component {
   render() {
-    debugger
+    let movie = this.props.movie
 
-    return(
-    <div className='center'>
-      <h1>Here are your results</h1>
-      <p></p>
-      <img src=""  alt=""/>
-    </div>
-    )
+    if (movie) {
+      return(
+      <div className='movie'>
+        <h3>{movie.Title}</h3>
+        <a href='movies/{movie.imdbID}' ><img src={movie.Poster}  alt=""/></a>
+      </div>
+      )
+    } else {
+      return(
+        <p>No Movies were found</p>
+      )
+    }
+
   }
 
 }
