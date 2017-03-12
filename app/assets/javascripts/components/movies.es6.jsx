@@ -12,14 +12,22 @@ class Movies extends React.Component {
     $.ajax({
       url: "http://www.omdbapi.com/?i=" + id
     }).done(response => {
-        this.state = response
+    console.log(response)
+        this.setState(response)
       })
 
     let target = $(e.target).parent().parent().parent()
-    console.log(target)
-    console.log(target[0])
-    target.flip()
+    target.flip({
+      autoSize: false,
+      autoWidth: false,
+      autoHeight: false
+    })
+    target.children('.back').fadeIn()
     target.flip('toggle')
+    target.children('.front').css('position','relative')
+    target.children('.back').css('position','absolute')
+    target.children('.back').css('top', '50px')
+
 
 
   }
@@ -29,7 +37,6 @@ class Movies extends React.Component {
 
     if (movie) {
       return(
-      <div className='movieHolder'>
         <div className='movie'>
           <div className='front'>
             <h3>{movie.Title}</h3>
@@ -37,10 +44,12 @@ class Movies extends React.Component {
           </div>
 
           <div className='back'>
-            <h3>hi</h3>
+            <h4>{movie.Title}</h4>
+            <h3>Plot</h3>
+            <p>{this.state.Plot}</p>
+            <h4 className='rating' >Rated: {this.state.Rated}</h4>
           </div>
         </div>
-      </div>
       )
     } else {
       return(
