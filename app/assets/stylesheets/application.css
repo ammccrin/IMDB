@@ -102,5 +102,6 @@ form {
 }
 
 .back {
+	display: none;
 	background-color: #02a5f7;
 }

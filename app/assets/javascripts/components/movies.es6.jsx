@@ -2,19 +2,21 @@ class Movies extends React.Component {
   constructor(){
     super()
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.state = {}
   }
 
   handleSubmit(e) {
     e.preventDefault()
-    var id = this.props.movie.imdbID
-    console.log(id)
+    let id = this.props.movie.imdbID
 
     $.ajax({
       url: "http://www.omdbapi.com/?i=" + id
     }).done(response => {
-        debugger
-       $(this.props).flip()
+        this.state = response
       })
+
+    let target = $(e.target).parent().parent().parent()
+    target.flip()
 
   }
 
@@ -23,14 +25,14 @@ class Movies extends React.Component {
 
     if (movie) {
       return(
-        <div className='movie' onClick={this.handleSubmit}>
+        <div className='movie'>
           <div className='front'>
             <h3>{movie.Title}</h3>
-            <a href='movies/{movie.imdbID}' ><img src={movie.Poster}  alt=""/></a>
+            <a href='movies/{movie.imdbID}' ><img src={movie.Poster}  onClick={this.handleSubmit}alt=""/></a>
           </div>
 
           <div className='back'>
-
+            <h3>{movie.Country}</h3>
           </div>
         </div>
       )
