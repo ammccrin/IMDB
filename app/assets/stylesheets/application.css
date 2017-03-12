@@ -92,16 +92,19 @@ form {
 	background-color: #013359;
 }
 
-
-.movie {
-	width: 300px;
+.movieHolder {
 	display: inline-block;
-	margin: auto;
 	margin: 0 2%; 
 	margin-top: 5%
 }
 
+.movie {
+	width: 300px;
+	margin: auto;
+}
+
+
 .back {
-	display: none;
+	/*display: none;*/
 	background-color: #02a5f7;
 }

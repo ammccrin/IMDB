@@ -16,7 +16,11 @@ class Movies extends React.Component {
       })
 
     let target = $(e.target).parent().parent().parent()
+    console.log(target)
+    console.log(target[0])
     target.flip()
+    target.flip('toggle')
+
 
   }
 
@@ -25,6 +29,7 @@ class Movies extends React.Component {
 
     if (movie) {
       return(
+      <div className='movieHolder'>
         <div className='movie'>
           <div className='front'>
             <h3>{movie.Title}</h3>
@@ -32,9 +37,10 @@ class Movies extends React.Component {
           </div>
 
           <div className='back'>
-            <h3>{movie.Country}</h3>
+            <h3>hi</h3>
           </div>
         </div>
+      </div>
       )
     } else {
       return(
