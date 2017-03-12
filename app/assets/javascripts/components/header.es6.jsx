@@ -21,12 +21,22 @@ class Header extends React.Component {
 
   render() {
     return(
-    <header>
-      <form action='/' method='get' onSubmit={this.handleSubmit}>
-        <input ref='content' type='text' name="title" placeholder='title'/>
-        <input type='submit' value='submit'/>
-      </form>
-    </header>
+    <div>
+      <header>
+        <h1>Search any movie title, anytime</h1>
+      </header>
+
+      <div className='search'>
+        <div className='container'>
+          <p>Type in a title and we will return every movie that has that title.</p>
+
+          <form action='/' method='get' onSubmit={this.handleSubmit}>
+              <input className='input' ref='content' type='text' name="title" placeholder='Title'/>
+              <input className='submit' type='submit' value='submit'/>
+          </form>
+        </div>
+      </div>
+    </div>
     )
   }
 
