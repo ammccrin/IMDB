@@ -13,8 +13,6 @@ class Header extends React.Component {
 
     }).done(response => {
       this.props.addMovie(response.Search)
-    }).fail(error => {
-      alert("NOOOO")
     })
   }
 
