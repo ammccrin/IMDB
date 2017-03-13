@@ -9,7 +9,7 @@ class Header extends React.Component {
     let name = this.refs.content.value
 
     $.ajax({
-      url: "http://www.omdbapi.com/?s=" + name
+      url: "https://www.omdbapi.com/?s=" + name
 
     }).done(response => {
       this.props.addMovie(response.Search)

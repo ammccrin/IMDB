@@ -10,7 +10,7 @@ class Movies extends React.Component {
     let id = this.props.movie.imdbID
 
     $.ajax({
-      url: "http://www.omdbapi.com/?i=" + id
+      url: "https://www.omdbapi.com/?i=" + id
     }).done(response => {
     console.log(response)
         this.setState(response)
