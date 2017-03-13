@@ -16,13 +16,15 @@ class Page extends React.Component {
     return(
       <div className='center'>
         <Header addMovie={this.addMovie}/>
-
-        {
-          this.state.movies.map(function(movie, i ) {
-            return <Movies movie={movie} key={i} />
-          })
-        }
-
+        <div className='background'>
+          <div className='container'>
+          {
+            this.state.movies.map(function(movie, i ) {
+              return <Movies movie={movie} key={i} />
+            })
+          }
+          </div>
+        </div>
       </div>
     )
   }

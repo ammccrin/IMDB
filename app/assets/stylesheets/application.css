@@ -13,23 +13,130 @@
  *= require_tree .
  *= require_self
  */
+body {
+	 margin: 0;
+	 font-family: 'Montserrat', sans-serif;
+}
+
 .center {
   text-align: center;
 }
 
-header {
-  background-color: gray;
-  text-align: center;
-  margin-bottom: 50px;
+.container {
+	width: 90%;
+	margin: auto;
 }
 
-header form {
-  color: white;
-  padding: 15px;
+header {
+  background-image: url('movie.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  text-align: center;
 }
+
+
+h1 {
+	font-size: 40px;
+	position: relative;
+	top: 50%;
+	left: 0;
+	right: 0;
+	color: white;
+	margin: 0;
+}
+
+.search {
+	color: white;
+	background-color: #02a5f7;
+	padding: 4% 0;
+}
+
+.search p {
+	font-size: 20px;
+	margin-top: 0;
+}
+
+form {
+  color: white;
+}
+
+.input {
+	width: 40%;
+	padding: 2% 2%;
+	border-radius: 10px;
+	border: 1px solid #02a5f7;
+	font-size: 15px;
+	background-color: white;
+}
+
+.input:focus {
+	border: 1px solid #011d33;
+	background-color: white;
+}
+
+.submit {
+	border-radius: 10px;
+	color: white;
+	font-weight: bold;
+	border: 1px solid #02a5f7;
+	background-color: #011d33;
+	padding: 2% 3%;
+	font-size: 15px;
+	cursor: pointer;
+	margin-left: 2%;
+	transition: background-color 0.5s ease;
+}
+
+.submit:hover {
+	background-color: #013359;
+}
+
 
 .movie {
 	width: 300px;
+	height: 445px;
+	display: inline-block;
 	margin: auto;
-	margin-bottom: 50px;
+	text-align: center;
+	margin: 0 2%; 
+	margin-top: 5%
+}
+
+.front img {
+	height: 440px;
+	width: 300px;
+}
+
+
+.back {
+	color: white;
+	min-height: 400px;
+	padding: 15px;
+	display: none;
+	background-color: #011d33;
+	border: 6px solid #02a5f7;
+	vertical-align: top;
+}
+
+.back h4 {
+	font-size: 25px;
+}
+
+h4.rating {
+	opacity: 0.5;
+}
+
+.back p {
+	line-height: 1.2;
+	font-family: 'Helvetica';
+	font-weight: lighter;
+	font-size: 18px;
+}
+
+.background {
+	background-image: url('http://tisk.org.tr/wp-content/uploads/2016/01/Light-Grey-Gradient-Background-3.jpg');
+	background-repeat: no-repeat;
+	background-position: -500px;
+	background-size: cover;
 }
