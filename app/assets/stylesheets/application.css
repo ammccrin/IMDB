@@ -103,14 +103,20 @@ form {
 	margin-top: 5%
 }
 
+.front img {
+	height: 440px;
+	width: 300px;
+}
+
 
 .back {
 	color: white;
-	min-height: 423px;
+	min-height: 400px;
 	padding: 15px;
 	display: none;
 	background-color: #011d33;
 	border: 6px solid #02a5f7;
+	vertical-align: top;
 }
 
 .back h4 {
@@ -127,3 +133,9 @@ h4.rating {
 	font-weight: lighter;
 	font-size: 18px;
 }
+
+/*.background {
+	background-image: url('background.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}*/
