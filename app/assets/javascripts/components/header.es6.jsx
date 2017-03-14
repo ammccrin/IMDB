@@ -28,7 +28,7 @@ class Header extends React.Component {
         <div className='container'>
           <p>Type in a title and we will return every movie that has that title.</p>
 
-          <form action='/' method='get' onSubmit={this.handleSubmit}>
+          <form action='/' method='get' autoComplete='off' onSubmit={this.handleSubmit} >
               <input className='input' ref='content' type='text' name="title" placeholder='Title'/>
               <input className='submit' type='submit' value='submit'/>
           </form>

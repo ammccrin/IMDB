@@ -48,6 +48,7 @@ class Movies extends React.Component {
             <h3>Plot</h3>
             <p>{this.state.Plot}</p>
             <h4 className='rating' >Rated: {this.state.Rated}</h4>
+            <h5>{this.state.imdbRating} / 10</h5>
           </div>
         </div>
       )

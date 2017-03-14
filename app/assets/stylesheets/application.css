@@ -39,11 +39,12 @@ header {
 h1 {
 	font-size: 40px;
 	position: relative;
-	top: 50%;
+	top: 45%;
 	left: 0;
 	right: 0;
 	color: white;
 	margin: 0;
+	padding: 0 5%;
 }
 
 .search {
@@ -73,6 +74,7 @@ form {
 .input:focus {
 	border: 1px solid #011d33;
 	background-color: white;
+	outline: none;
 }
 
 .submit {
@@ -92,6 +94,9 @@ form {
 	background-color: #013359;
 }
 
+.submit:focus {
+	outline: none;
+}
 
 .movie {
 	width: 300px;
@@ -106,6 +111,7 @@ form {
 .front img {
 	height: 440px;
 	width: 300px;
+	box-shadow: 1px 1px 10px #888888;
 }
 
 
@@ -117,6 +123,8 @@ form {
 	background-color: #011d33;
 	border: 6px solid #02a5f7;
 	vertical-align: top;
+	cursor: pointer;
+	box-shadow: 1px 1px 15px #888888;
 }
 
 .back h4 {
@@ -134,9 +142,153 @@ h4.rating {
 	font-size: 18px;
 }
 
-.background {
-	background-image: url('http://bowerbirdvintage.com.au/wp-content/uploads/2014/08/light-grey-background-pattern-i32-1024x948.jpg');
-	background-repeat: no-repeat;
-	background-position: -500px;
-	background-size: cover;
+.back h5 {
+	font-size: 45px;
+	color: #02a5f7;
+	margin: 5% 0;
 }
+
+
+
+
+/*============ MEDIA QUERIES =============*/
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+  	h1 {
+  		font-size: 50px;
+			top: 45%;
+  	}
+
+  	.search {
+			padding: 9% 0;
+		}
+
+		.search p {
+			font-size: 35px;
+			margin-bottom: 50px;
+			line-height: 1.4;
+		}
+
+		form {
+		  color: white;
+		}
+
+		.input {
+			border-radius: 15px;
+			width: 50%;
+			padding: 3% 2%;
+			font-size: 27px;
+		}
+
+		.submit {
+			padding: 3% 6%;
+			font-size: 27px;
+		}
+
+		.submit:focus {
+			outline: none;
+		}
+
+		.input:focus {
+			border: 1px solid #011d33;
+			background-color: white;
+			outline: none;
+		}
+
+		.movie {
+			width: 500px;
+			height: 745px;
+			display: block;
+			margin: 0 auto; 
+			margin-top: 8%;
+			margin-bottom: 25%;
+		}
+
+		h3 {
+			font-size: 35px;
+		}
+
+		.front img {
+			height: 740px;
+			width: 500px;
+			height: auto;
+			box-shadow: 1px 1px 15px #888888;
+		}
+
+		.back {
+			min-height: 700px;
+			padding: 30px;
+			display: none;
+			border: 10px solid #02a5f7;
+			box-shadow: 1px 1px 20px #888888;
+			margin-bottom: 25%;
+		}
+
+		.back h4 {
+			font-size: 40px;
+			margin-bottom: 2%;
+		}
+
+		h4.rating {
+			opacity: 0.5;
+		}
+
+		.back p {
+			line-height: 1.1;
+			font-family: 'Helvetica';
+			font-weight: lighter;
+			font-size: 35px;
+			margin-top: 2%;
+		}
+
+		.back h5 {
+			font-size: 60px;
+			margin: 10% 0;
+		}
+
+}
+
+
+
+@media (max-width: 700px) {
+	header {
+	  background-size: cover;
+	  height: 400px;
+	  text-align: center;
+	}
+
+	h1 {
+		font-size: 35px;
+		top: 45%;
+	}
+
+  .search {
+		padding: 7% 0;
+	}
+
+	.search p {
+		font-size: 20px;
+		margin-bottom: 30px;
+		line-height: 1.4;
+	}
+
+	form {
+	  color: white;
+	}
+
+	.input {
+		width: 50%;
+		padding: 3% 2%;
+		font-size: 17px;
+	}
+
+	.submit {
+		padding: 3% 6%;
+		font-size: 17px;
+	}
+
+} 
+
