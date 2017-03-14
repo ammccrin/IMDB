@@ -16,7 +16,6 @@ class Page extends React.Component {
     return(
       <div className='center'>
         <Header addMovie={this.addMovie}/>
-        <div className='background'>
           <div className='container'>
           {
             this.state.movies.map(function(movie, i ) {
@@ -24,7 +23,6 @@ class Page extends React.Component {
             })
           }
           </div>
-        </div>
       </div>
     )
   }
