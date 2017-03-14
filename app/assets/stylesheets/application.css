@@ -28,7 +28,7 @@ body {
 }
 
 header {
-  background-image: url('http://www.bearcastmedia.com/wp-content/uploads/2017/01/cover.jpg');
+  background-image: url('https://www.bearcastmedia.com/wp-content/uploads/2017/01/cover.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   height: 500px;
@@ -186,6 +186,8 @@ h4.rating {
 		.submit {
 			padding: 3% 6%;
 			font-size: 27px;
+			border-radius: 15px;
+
 		}
 
 		.submit:focus {

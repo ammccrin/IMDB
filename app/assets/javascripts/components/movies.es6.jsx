@@ -12,7 +12,6 @@ class Movies extends React.Component {
     $.ajax({
       url: "https://www.omdbapi.com/?i=" + id
     }).done(response => {
-    console.log(response)
         this.setState(response)
       })
 
@@ -47,7 +46,6 @@ class Movies extends React.Component {
             <h4>{movie.Title}</h4>
             <h3>Plot</h3>
             <p>{this.state.Plot}</p>
-            <h4 className='rating' >Rated: {this.state.Rated}</h4>
             <h5>{this.state.imdbRating} / 10</h5>
           </div>
         </div>
