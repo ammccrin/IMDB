@@ -8,4 +8,4 @@ This app reaches out to the omdb api, which stores all the information about the
 
 ## Code
 The backend of this app is rails, but the front end of this app uses react. 
-Whenever a user enter a title the front end reaches out to rails, which then goes to the api to grab the information, and then sends it back to react to dispay back to the users.
+Whenever a user enters a title the front end reaches out to rails, which then goes to the api to grab the information, and then sends it back to react to dispay back to the users.
